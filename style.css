@@ -287,7 +287,93 @@ h3 {
 }
 
 
+.menu {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    transform: translateY(-100%);
+    opacity: 0%;
+    pointer-events: none;
+    transition: opacity 300ms, transform 300ms;
+}
+.menu.open {
+    opacity: 100%;
+    pointer-events: all;
+    transform: none;
+}
+.menu_header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.93em 6.4%;
+}
+
+.menu_list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.25rem;
+    letter-spacing: .068em;
+    background-color: var(--color-1);
+    padding: 2.5em 6.4% 18.75em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    background-image: url(./images/bg-pattern-mobile-nav.svg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.menu_link {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu_btn-view {
+    font-size: inherit;
+}
+
+.btn-menu, .menu_btn-close 
+{
+    cursor: pointer;
+    transition: transform 300ms;
+}
+
+.btn-menu, .menu_btn-close:hover 
+{
+    transform: scale(1.2);
+}
+
+
 @media (min-width: 768px){
+    .header {
+        padding: 1.93em 11.4%;
+        justify-content: end;
+    }
+    .header_logo {
+        margin-right: auto;
+    }
+
+    .btn-menu {
+        display: none;
+    }
+
+    .nav, .header_btn {
+        display: block;
+    }
+
+    .nav{
+        margin-right: 2em;
+    }
+
+    .navlist {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        gap: 1.625em;
+    }
     .features_list 
     {
         flex-direction: row;
@@ -325,32 +411,7 @@ h3 {
     }
 
 
-    .header {
-        padding: 1.93em 11.4%;
-        justify-content: end;
-    }
-    .header_logo {
-        margin-right: auto;
-    }
-
-    .btn-menu {
-        display: none;
-    }
-
-    .nav, .header_btn {
-        display: block;
-    }
-
-    .nav{
-        margin-right: 2em;
-    }
-
-    .navlist {
-        list-style: none;
-        padding-left: 0;
-        display: flex;
-        gap: 1.625em;.
-    }
+   
 
     .hero {
         background-color: var(--color-3);
