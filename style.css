@@ -10,6 +10,7 @@
 body 
 {
     font-family: "Karla", sans-serif;
+    text-align: center;
 }
 
 * {
@@ -74,4 +75,180 @@ h3 {
 {
     background-color: white;
     color: var(--color-1);
+}
+
+
+.navlink 
+{
+    text-transform: uppercase;
+    letter-spacing: .115em;
+    font-size: .8125rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-3);
+}
+
+
+
+.header{
+    padding: 1.93em 6.4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav, .header_btn {
+    display: none;
+}
+
+
+.hero_img{
+    width: 100%;
+}
+
+.hero_img--desktop
+{
+    display: none;
+}
+.hero_img--mobile {
+    display: block;
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero_content {
+    background-color: var(--color-3);
+    color:white;
+    padding: 5.81em 6.4%;
+    background-image: url(./images/bg-pattern-intro-left-mobile.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero_content::after
+{
+    content: '';
+    width: 377px;
+    height: 352px;
+    background-image: url(./images/bg-pattern-intro-right-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: absolute;
+    bottom: -10em;
+}
+
+.title {
+    margin-bottom: .33em;
+}
+
+.hero_body{
+    margin-bottom: 2em;
+}
+
+
+.main {
+    padding: 0 6.4% 8.75em;
+}
+
+
+.features 
+{
+    padding: 11.3em 6.4% 8.75em;
+}
+
+.features_title {
+    position: relative;
+    margin-bottom: 1.66em;
+}
+
+.features_title::before
+{
+    content: '';
+    width: 45%;
+    height: 1px;
+    background-color: hsl(296, 30%, 68%);
+    position: absolute;
+    top: -.83em;
+    left: 50%;
+    transform: translate(-50%);
+}
+.features_list {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5em;
+}
+
+.feature_icon {
+    margin-bottom: 2em;
+}
+
+.feature_title {
+    margin-bottom: .57em;
+}
+
+.feature_body {
+    color: var(--color-2);
+}
+
+.cta {
+    background-color: var(--color-3);
+    color:white;
+    padding: 4.5em 0;
+    background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.cta_title {
+    margin-bottom: 1em;
+}
+
+
+
+.footer {
+    background-color: hsl(0,0%,98%);
+    padding: 0 6.4%;
+}
+
+.footer_top {
+    padding: 5.5em 0 2.5em;
+    background-image: url(./images/bg-pattern-footer-mobile.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid hsl(0,0%, 59%);
+}
+
+.footer_logo {
+    margin-bottom: 2em;
+}
+
+.social {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    justify-content: center;
+    gap:1em;
+}
+
+.footer_btm {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+.footer_links_title
+{
+    color: var(--color-2);
+    margin-bottom: 2.76em;
+}
+.footer_links {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.footer_btm {
+    padding: 2.5em 4.6% 5.5em;
 }
